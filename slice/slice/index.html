@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在线程序切片</title>
+
+	<style type="text/css"> 
+ 
+
+    #editor {
+        font-size:14px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0%;
+        left: 40%;
+        right: 0;
+    }
+    
+      .num {
+        font-size:14px;
+        margin: 0;
+        position: absolute;
+        top: 95%;
+        bottom: 10%;
+        left: 40%;
+        right: 0;
+    }
+.title{
+font-size:22px
+
+}
+.sub{
+
+margin-top:50px;
+font-size:17px
+
+}
+
+.back1{
+
+width:30vw;
+height:90vh;
+
+
+
+
+}
+.back2{
+
+width:70vw;
+height:90vh;
+
+
+
+
+}
+.back3{
+
+height:90vh;
+
+
+
+
+}
+
+.sub3{
+
+margin-top:50px;
+font-size:17px;
+color:red
+}
+.sub3:hover{
+
+
+        cursor:pointer
+    
+
+}
+.sub2{
+
+margin-top:50px;
+font-size:17px
+}
+.sub:hover{
+
+
+        cursor:pointer
+    
+
+}
+
+.tx{
+font-family:"Times New Roman";
+font-size:19px
+}
+.tx2{
+font-family:"Times New Roman";
+font-size:19px
+}
+.tx2:hover{
+
+
+        cursor:pointer
+    
+
+}
+.loading{
+            width: 80px;
+            height: 40px;
+            margin: 0 auto;
+    display: none;
+        }
+        .loading span{
+            display: inline-block;
+            width: 8px;
+            height: 100%;
+            border-radius: 4px;
+            background: lightgreen;
+            -webkit-animation: load 1s ease infinite;
+        }
+        @-webkit-keyframes load{
+            0%,100%{
+                height: 40px;
+                background: lightgreen;
+            }
+            50%{
+                height: 70px;
+                margin: -15px 0;
+                background: lightblue;
+            }
+        }
+        .loading span:nth-child(2){
+            -webkit-animation-delay:0.2s;
+        }
+        .loading span:nth-child(3){
+            -webkit-animation-delay:0.4s;
+        }
+        .loading span:nth-child(4){
+            -webkit-animation-delay:0.6s;
+        }
+        .loading span:nth-child(5){
+            -webkit-animation-delay:0.8s;
+        }
+
+.myMarker {
+  position:absolute;
+  background:rgba(220,220,220,0.5);
+  z-index:20
+}
+
+.menu{
+width: 400px;
+height: 25px;
+line-height: 25px;
+padding: 0 10px;
+
+}
+.menu:hover{
+ background:rgba(220,220,220,0.5);
+
+}
+#menu{
+width: 0; /*设置为0 隐藏自定义菜单*/
+height: 0px;
+overflow: hidden; /*隐藏溢出的元素*/
+box-shadow: 0 1px 1px #888,1px 0 1px #ccc;
+position: absolute; /*自定义菜单相对与body元素进行定位*/
+z-index:20
+}
+</style>
+</head>
+
+<body >
+
+
+
+
+
+<pre id="editor">#include &ltstdio.h&gt
+ 
+int main()
+{
+    /* 我的第一个 C 程序 */
+    printf("Hello, World! \n");
+ 
+    return 0;
+}</pre>
+
+
+
+
+	<div  style="display:flex"ng-app="app"  ng-controller="myCtrl"  >
+
+
+<div id="menu" >
+
+<div ng-click="highlight(searchresult.length-right.length+$index)" ng-repeat="x in right track by $index" class="menu">{{x}}</div>
+</div>
+<div class="num"  style="display:flex;align-items:center" >
+<p     style="font-size:14px;margin-left:70px;font-family:"Times New Roman"">{{currentname}}</p>
+<p ng-click="cursor(x)"  class="tx2" ng-repeat=" x in number track by $index" style="font-size:14px;margin-left:70px">{{x}}</p>
+
+</div>
+
+
+
+<div  class="back1" >
+<div id="load"class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+</div>
+<input  onchange="angular.element(this).scope().change()"  type="file" id="file" style="display:none">
+
+	<p class="title">在线程序切片系统</p>
+	<p  ng-click="file()" class="sub" >选择代码</p>
+	
+	<p ng-click="slice()"  class="sub">获取切片</p>
+	
+	<div ng-show="show">
+	<p ng-click="net2()"class="sub3">前向切片</p>
+	<p ng-click="net()"class="sub3">后向切片</p>
+	</div>
+	<p ng-click="net3()"class="sub" >获取图像</p>
+
+	<input  ng-model="input" ng-change="search()" type="text" class="sub2" placeholder="搜索变量" >
+
+<div ng-show="showresult" ng-repeat=" x in searchresult track by $index">
+
+<p ng-click="highlight($index)" class="tx2">{{x}}</p>
+</div>
+
+</div>
+
+
+
+
+
+
+	
+</div>
+
+
+
+
+
+<script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  
+<script src="./angular.min.js" ></script>
+<script src="./word.js" ></script>
+</body>
+</html>
