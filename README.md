@@ -11,6 +11,6 @@
  `构建完成后`<br>
  `docker run -it -p:8000:8000 victorybringer/slice`<br>
 # Run
- `在浏览器输入localhost:8000`<br>
+ `localhost:8000`<br>
 
 
