@@ -5,7 +5,7 @@
  可访问阿里云服务器 `http://101.132.129.85:8000` 查看实例
 # Install 
 ## 1.使用预构建的Docker镜像<br>
- `docker run -it -p:8000:8000 victorybringer/slice`<br>
+ `docker run -it -p 8000:8000 victorybringer/slice`<br>
 ## 2.或使用Dockerfile进行构建<br>
  `docker build -t victorybringer/slice .`<br>
  `构建完成后`<br>
