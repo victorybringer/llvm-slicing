@@ -177,7 +177,7 @@ $scope.highlight = function(index){
 		
 	for(var n=0;n<$scope.result.length;++n){
 		
-		if($scope.result[n].substring(0,1)==$scope.input){
+		if($scope.result[n].trim().substring(0,1)==$scope.input){
 			a.push($scope.result[n])
 		}
 		
