@@ -9,7 +9,7 @@
 ## 2.或使用Dockerfile进行构建<br>
  `docker build -t victorybringer/slice .`<br>
  `构建完成后`<br>
- `docker run -it -p:8000:8000 victorybringer/slice`<br>
+ `docker run -it -p 8000:8000 victorybringer/slice`<br>
 # Run
  `localhost:8000`<br>
 
